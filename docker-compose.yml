@@ -1,0 +1,17 @@
+version: "3"
+networks:
+  net:
+services:
+  testDb:
+    networks:
+      - net
+    image:
+      # see the available tags at <https://mcr.microsoft.com/v2/mssql/server/tags/list>
+      "mcr.microsoft.com/mssql/server:2022-CTP2.0-ubuntu-20.04"
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      # This is read from the './.env' file.
+      # Run `createDotEnv` and fill it in, if you haven't already.
+      SA_PASSWORD: ${DB_SA_PASSWORD}

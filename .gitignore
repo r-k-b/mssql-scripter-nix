@@ -1,0 +1,5 @@
+# secrets
+.env
+
+# the output of 'nix build'
+result
