@@ -4,9 +4,9 @@ requires:
 
 - nix >= 2.4 with Flakes enabled
 
-`$ nix run github:r-k-b/mssql-cli-nix -- --version`
+`$ nix run github:r-k-b/mssql-scripter-nix -- --version`
 
-`$ nix run github:r-k-b/mssql-cli-nix -- --help`
+`$ nix run github:r-k-b/mssql-scripter-nix -- --help`
 
 Etc etc.
 
@@ -26,3 +26,9 @@ steps:
 - `docker-compose up -d`
 - `mssql-scripter --version`
 - hack away
+
+# see also
+
+- <https://github.com/microsoft/mssql-scripter>
+- <https://github.com/dbcli/mssql-cli>
+- <https://github.com/r-k-b/mssql-cli-nix>
