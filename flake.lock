@@ -39,16 +39,17 @@
     "source": {
       "flake": false,
       "locked": {
-        "lastModified": 1642620849,
-        "narHash": "sha256-EKLvxLnQqhV2hGNBHe4ryzcHEo4p38QKsWZZ3hrgOsk=",
-        "owner": "dbcli",
-        "repo": "mssql-cli",
-        "rev": "0f97c567a1ec63edf3a3d19fe054b0b1e3fe7c61",
+        "lastModified": 1530217446,
+        "narHash": "sha256-pjIxsywAKrznomvOOSz9ucNHFrwmQVhedqvpHzH0ZHU=",
+        "owner": "microsoft",
+        "repo": "mssql-scripter",
+        "rev": "a2e3efddfcf744a4f7d11f2b3b538f8f7102728c",
         "type": "github"
       },
       "original": {
-        "owner": "dbcli",
-        "repo": "mssql-cli",
+        "owner": "microsoft",
+        "repo": "mssql-scripter",
+        "rev": "a2e3efddfcf744a4f7d11f2b3b538f8f7102728c",
         "type": "github"
       }
     }

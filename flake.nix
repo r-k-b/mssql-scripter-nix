@@ -5,7 +5,8 @@
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
   inputs.source = {
-    url = "github:dbcli/mssql-cli";
+    url =
+      "github:microsoft/mssql-scripter?rev=a2e3efddfcf744a4f7d11f2b3b538f8f7102728c";
     flake = false;
   };
 
@@ -15,25 +16,11 @@
         pkgs = nixpkgs.legacyPackages.${system};
         inherit (pkgs) lib callPackage stdenv;
 
-        #        mssql-scripter = stdenv.mkDerivation {
-        #          name = "mssql-scripter";
-        #          src = pkgs.fetchFromGitHub {
-        #            owner = "microsoft";
-        #            repo = "mssql-scripter";
-        #            rev = "v1.0.0a23";
-        #            sha256 = "sha256-pjIxsywAKrznomvOOSz9ucNHFrwmQVhedqvpHzH0ZHU=";
-        #          };
-        #        };
         version = "1.0.0a23";
         mssql-scripter = pkgs.python3Packages.buildPythonApplication {
           name = "mssql-scripter";
           inherit version;
-          src = pkgs.fetchFromGitHub {
-            owner = "microsoft";
-            repo = "mssql-scripter";
-            rev = "v${version}";
-            sha256 = "sha256-pjIxsywAKrznomvOOSz9ucNHFrwmQVhedqvpHzH0ZHU=";
-          };
+          src = source;
 
           buildInputs = with pkgs; [ python3 ];
 
